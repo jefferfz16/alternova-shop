@@ -23,10 +23,14 @@ export default Products;
 export const Container = styled.div`
   width: 100%;
   height: fit-content;
-  padding: 1rem 2rem 1rem;
+  padding: 0.8rem 2rem 0.8rem;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 77px);
+  min-height: calc(100vh - 80px);
+  @media (max-width: 1023px) {
+    min-height: fit-content;
+    padding: 0.8rem 1rem 0.8rem;
+  }
   > h3 {
     color: var(--color-principal1);
     margin: 0.5rem 0;

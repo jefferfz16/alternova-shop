@@ -48,6 +48,10 @@ const Btn = styled.button`
   border: 0;
   border-radius: 50px;
   color: var(--color-White);
+  @media (max-width: 1439px) {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
   > p {
     margin-left: 0.5rem;
     white-space: nowrap;

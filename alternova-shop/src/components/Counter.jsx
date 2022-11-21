@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
 
@@ -36,6 +36,11 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-right: 0.5rem;
+  @media (max-width: 1439px) {
+    justify-content: space-between;
+    width: 100%;
+  }
   svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -49,8 +54,14 @@ const Container = styled.div`
     border: 1px solid var(--color-Text);
     border-radius: 5px;
     padding: 0.5rem;
-    min-width: 50px;
+    min-width: 40px;
     text-align: center;
+    background-color: var(--color-White);
+    @media (max-width: 1439px) {
+      flex: 1;
+      min-width: auto;
+      margin: 0 0.5rem;
+    }
     &::selection {
       background: transparent;
     }

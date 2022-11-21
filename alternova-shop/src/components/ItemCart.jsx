@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { FiTrash2 } from "react-icons/fi";
 
 const ItemCart = ({ data }) => {
   /*destructing data */
   const { name, unitPrice, quantity } = data;
   return (
     <Item>
-      <FiTrash2 />
       <Container>
         <p className="bold">{name}</p>
         <p>{quantity}</p>
@@ -44,7 +42,8 @@ const Container = styled.div`
   border-radius: 8px;
   padding: 1rem;
   font-size: 0.8rem;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 0.5rem 0;
+  align-items: center;
   > p {
     flex: 1;
     margin: 0 3px;

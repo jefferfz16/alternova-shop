@@ -10,13 +10,16 @@ const Cart = () => {
   const context = useContext(UserContext);
   const [order, setOrder] = useState(false);
   return (
-    <Container>
+    <ContainerCart>
       <h3>My cart</h3>
       {context.itemCart.length === 0 ? (
         order ? (
-          <WithOutData label="send order" />
+          <WithOutData
+            color="var(--color-Correct)"
+            label="Order sent successfully. (view in console)."
+          />
         ) : (
-          <WithOutData label="No product" />
+          <WithOutData label="No products" />
         )
       ) : (
         <>
@@ -48,16 +51,25 @@ const Cart = () => {
           </Footer>
         </>
       )}
-    </Container>
+    </ContainerCart>
   );
 };
 
 export default Cart;
 
+const ContainerCart = styled(Container)`
+  /*  @media (max-width: 1023px) {
+    display: none;
+  } */
+`;
+
 const ContainerItems = styled.div`
   width: 100%;
   flex: 1;
   padding: 1rem;
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
   > div:first-child {
     margin-top: 0;
   }
@@ -88,6 +100,9 @@ const Footer = styled.div`
   width: 100%;
   border-top: 1px solid var(--color-Text);
   padding: 1rem;
+  @media (max-width: 1023px) {
+    padding: 1rem 0;
+  }
   > h3 {
     flex: 3;
   }

@@ -28,6 +28,7 @@ const CardProduct = ({ data }) => {
             />
           )}
           <Button
+            icon={true}
             data={data}
             quantity={quantity}
             setQuantity={setQuantity}
@@ -53,6 +54,14 @@ const Container = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
   transition: 0.4s;
+  height: fit-content;
+  @media (max-width: 1439px) {
+    width: calc(100% / 3 - 1rem);
+    min-width: 200px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
   &:hover {
     transform: translateY(-3px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -91,6 +100,9 @@ const ContainerData = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 0.5rem;
+    @media (max-width: 1439px) {
+      flex-direction: column;
+    }
     > p {
       font-size: 0.8rem;
     }

@@ -1,5 +1,6 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import styled from "styled-components";
+import ButtonFloat from "../components/ButtonFloat";
 import Cart from "../components/sections/Cart";
 import Header from "../components/sections/Header";
 import Products from "../components/sections/Products";
@@ -9,6 +10,8 @@ export const UserContext = createContext();
 
 const Principal = () => {
   const [itemCart, setItemCart] = useState(CartData.products);
+  /*state view */
+
   return (
     <UserContext.Provider value={{ itemCart, setItemCart }}>
       <ContainerGeneral>
@@ -31,10 +34,19 @@ const ContainerGeneral = styled.div`
 
 const ContainerSections = styled.div`
   width: 100%;
-  height: calc(100vh - 77px);
+  height: calc(100vh - 80px);
   display: flex;
   overflow: auto;
+  z-index: 98;
+  margin-top: 3px;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
   > div:first-child {
     border-right: 1px solid var(--color-Line);
+    @media (max-width: 1023px) {
+      border-right: none;
+      border-bottom: 1px solid var(--color-Line);
+    }
   }
 `;

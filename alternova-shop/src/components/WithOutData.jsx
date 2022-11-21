@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { MdContentPasteOff } from "react-icons/md";
+import { MdContentPasteOff, MdDoneAll } from "react-icons/md";
 
-const WithOutData = ({ label }) => {
+const WithOutData = ({ label, color }) => {
   return (
-    <Container>
-      <MdContentPasteOff />
+    <Container color={color}>
+      {color ? <MdDoneAll /> : <MdContentPasteOff />}
       <p>{label}</p>
     </Container>
   );
@@ -19,8 +19,13 @@ const Container = styled.div`
   padding: 1rem;
   border-radius: 8px;
   align-items: center;
-  background-color: var(--color-Back);
+  background-color: ${(props) =>
+    props.color ? props.color : "var(--color-Back)"};
   > p {
     margin: 0 0.5rem;
+  }
+  > svg {
+    height: 24px;
+    width: 24px;
   }
 `;
