@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/alternova-shop/static/css/main.af6a0dcf.css",
-    "main.js": "/alternova-shop/static/js/main.0ab1b5a0.js",
+    "main.css": "/alternova-shop/static/css/main.b71ffea5.css",
+    "main.js": "/alternova-shop/static/js/main.81f11ef6.js",
     "index.html": "/alternova-shop/index.html",
     "static/media/logo-A.svg": "/alternova-shop/static/media/logo-A.5aaed8d0945a555c3557aad7d75fe6af.svg",
-    "main.af6a0dcf.css.map": "/alternova-shop/static/css/main.af6a0dcf.css.map",
-    "main.0ab1b5a0.js.map": "/alternova-shop/static/js/main.0ab1b5a0.js.map"
+    "main.b71ffea5.css.map": "/alternova-shop/static/css/main.b71ffea5.css.map",
+    "main.81f11ef6.js.map": "/alternova-shop/static/js/main.81f11ef6.js.map"
   },
   "entrypoints": [
-    "static/css/main.af6a0dcf.css",
-    "static/js/main.0ab1b5a0.js"
+    "static/css/main.b71ffea5.css",
+    "static/js/main.81f11ef6.js"
   ]
 }
